@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #eee6d2;
+  --secondary-color: #e81564;
+  --extra-light: #f5f5f4;
+}
+
+
+body{
+  background-color: var(--primary-color);
+}
+
+section{
+  max-width: 1280px;
+  margin: 50px auto;
+}
+/* card section code start */
+.profile-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-container .profile-card{
+  max-width: 350px;
+  height: 380px;
+  background-color: var(--extra-light);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.profile-card .profile-header{
+  padding: 16px 0;
+  position: relative;
+}
+
+.profile-card .profile-header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.profile-header .profile-image{
+  width: 190px;
+  height: 240px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid var(--extra-light);
+  transition: 0.5s;
+}
+
+.profile-header .profile-image img{
+  height: 100%;
+}
+
+.profile-card .name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profile-card .profile-footer{
+  position: absolute;
+  width: 100%;
+  padding: 8px;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  bottom: -50px;
+  transition: 0.5s;
+}
+
+.profile-card .profile-footer span{
+  font-size: 24px;
+  color: var(--extra-light);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.profile-card .profile-footer span:hover{
+  scale: 1.1;
+}
+
+.profile-card:hover .profile-header::before{
+   background-color: var(--secondary-color);
+}
+
+
+.profile-card:hover .profile-image{
+  scale: .75;
+}
+
+.profile-card:hover .profile-footer{
+  bottom: 0;
+}
+/* card section code end */
